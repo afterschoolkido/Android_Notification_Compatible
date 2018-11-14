@@ -8,3 +8,7 @@
 English:
 
 An util for Android Notification you can run on Android 8.0
+
+Blog:
+
+https://www.jianshu.com/p/712d8072ea9c
