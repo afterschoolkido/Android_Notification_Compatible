@@ -13,7 +13,6 @@ import android.support.v4.app.NotificationCompat;
 
 public class NotificationUtil extends ContextWrapper {
 
-    private NotificationManager mManager;
     public static final String sID = "channel_1";
     public static final String sName = "channel_name_1";
 
@@ -33,10 +32,7 @@ public class NotificationUtil extends ContextWrapper {
     }
 
     private NotificationManager getManager() {
-        if (mManager == null) {
-            mManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        }
-        return mManager;
+        return (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
