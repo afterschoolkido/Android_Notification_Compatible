@@ -68,7 +68,7 @@ public class NotificationUtil extends ContextWrapper {
                 .setContentText(content)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round))
-                .setStyle(style1)
+                .setStyle(style)
                 .setAutoCancel(true);
     }
 
@@ -91,7 +91,7 @@ public class NotificationUtil extends ContextWrapper {
                 .setContentText(content)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round))
-                .setStyle(style1)
+                .setStyle(style)
                 .setNumber(1)
                 .setAutoCancel(true);
     }
