@@ -25,14 +25,14 @@ public class NotificationUtil extends ContextWrapper {
         if (Build.VERSION.SDK_INT >= 26) {
             createNotificationChannel();
             Notification notification = getNotification_26(title, content).build();
-            getmManager().notify(1, notification);
+            getManager().notify(1, notification);
         } else {
             Notification notification = getNotification_25(title, content).build();
-            getmManager().notify(1, notification);
+            getManager().notify(1, notification);
         }
     }
 
-    private NotificationManager getmManager() {
+    private NotificationManager getManager() {
         if (mManager == null) {
             mManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
@@ -47,7 +47,7 @@ public class NotificationUtil extends ContextWrapper {
         channel.setLightColor(Color.GREEN);
         // 震动开启
         channel.enableVibration(true);
-        getmManager().createNotificationChannel(channel);
+        getManager().createNotificationChannel(channel);
     }
 
     public NotificationCompat.Builder getNotification_25(String title, String content) {
