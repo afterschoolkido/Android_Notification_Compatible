@@ -53,13 +53,13 @@ public class NotificationUtil extends ContextWrapper {
     public NotificationCompat.Builder getNotification_25(String title, String content) {
 
         // 以下是展示大图的通知
-        android.support.v4.app.NotificationCompat.BigPictureStyle style = new android.support.v4.app.NotificationCompat.BigPictureStyle();
+        NotificationCompat.BigPictureStyle style = new NotificationCompat.BigPictureStyle();
         style.setBigContentTitle(title);
         style.setSummaryText(content);
         style.bigPicture(BitmapFactory.decodeResource(getResources(),R.drawable.pic));
 
         // 以下是展示多文本通知
-        android.support.v4.app.NotificationCompat.BigTextStyle style1 = new android.support.v4.app.NotificationCompat.BigTextStyle();
+        NotificationCompat.BigTextStyle style1 = new NotificationCompat.BigTextStyle();
         style1.setBigContentTitle(title);
         style1.bigText(content);
 
